@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - My Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background-image: url('https://daelimo.com/wp-content/uploads/2024/01/dae-limo-man-suit-stands-car-with-black-car-background-02.jpg'); 
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+        .nav-buttons {
+            margin-bottom: 20px;
+        }
+        .nav-buttons a {
+            margin: 0 10px;
+            padding: 10px 20px;
+            background-color: rgba(78, 68, 167, 0.8);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        form {
+            display: inline-block;
+            text-align: left;
+            margin-left: auto;
+            margin-right: auto;
+            width: 300px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        input {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4e44a7;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        .red-button {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-buttons">
+        <a href="index.html">Home Page</a>
+        <a href="car_reviews.html">Car Reviews</a>
+        <a href="luxury_car_gallery.html">Luxury Car Gallery</a>
+        <a href="contact_us.html" class="red-button">Contact Us</a>
+        <a href="top_car_brands.html">Top Car Brands</a>
+    </div>
+ 
+    <h1>Contact Us!</h1>
+    <p>Got any queries or questions? Feel free to reach out and fill out the form below and we'll get back to you within 24 hours!</p>
+    <form action="submit.php" method="POST">
+        <input type="text" name="name" placeholder="Your Full Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="tel" name="phone" placeholder="Your Phone Number" required>
+        <input type="text" name="message" placeholder="Insert Message" required>
+        <button type="submit">Submit Contact Form</button>
+    </form>
+    <a href="index.html">Back to Home Page</a>
+</body>
+</html>

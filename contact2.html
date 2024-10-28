@@ -1,0 +1,109 @@
+<!DOCTYPE html> 
+
+<html lang="en"> 
+
+<head> 
+
+    <meta charset="UTF-8"> 
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+    <title>Contact Us - Be MODEST</title> 
+
+    <style> 
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            margin: 0; 
+            padding: 50px; 
+            background-image: url('https://daelimo.com/wp-content/uploads/2024/01/dae-limo-man-suit-stands-car-with-black-car-background-02.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #fff; 
+        } 
+
+        form { 
+            display: inline-block; 
+            text-align: left; 
+            background-color: rgba(255, 255, 255, 0.8); 
+            padding: 20px; 
+            border-radius: 10px; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+        } 
+
+        input, button { 
+            display: block; 
+            width: 100%; 
+            margin-bottom: 10px; 
+            padding: 10px; 
+        } 
+
+        button { 
+            background-color: #4e44a7; 
+            color: white; 
+            border: none; 
+            border-radius: 5px; 
+        } 
+    </style> 
+
+   
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script> 
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script> 
+    <script> 
+      
+        var firebaseConfig = { 
+            apiKey: "AIzaSyDGIqrhi86VsESnVnzVul86JXXuQsFX4rw", 
+            authDomain: "contactus2-1961f.firebaseapp.com", 
+            databaseURL: "https://contactus2-1961f-default-rtdb.firebaseio.com", 
+            projectId: "contactus2-1961f", 
+            storageBucket: "contactus2-1961f.appspot.com", 
+            messagingSenderId: "380469985476", 
+            appId: "1:380469985476:web:0fedd950db830cbdd70991" 
+        }; 
+
+        
+        firebase.initializeApp(firebaseConfig); 
+
+       
+        var database = firebase.database(); 
+         
+       
+        function submitContactForm(event) { 
+            event.preventDefault(); 
+            var name = document.getElementById("name").value; 
+            var email = document.getElementById("email").value; 
+
+           
+            database.ref('contacts').push({ 
+                name: name, 
+                email: email 
+            }).then(function() { 
+                alert("Thank you for submitting!"); 
+            }).catch(function(error) { 
+                alert("Error: " + error.message); 
+            }); 
+
+           
+            document.getElementById("contactForm").reset(); 
+        } 
+    </script> 
+
+</head> 
+
+<body> 
+
+    <h1>Contact Us</h1> 
+
+    <form id="contactForm" onsubmit="submitContactForm(event)"> 
+        <input type="text" id="name" name="name" placeholder="Your Name" required> 
+        <input type="email" id="email" name="email" placeholder="Your Email" required> 
+        <button type="submit">Submit</button> 
+    </form> 
+
+    <a href="index.html" style="color: #fff;">Back to Home</a> 
+
+</body> 
+
+</html> 

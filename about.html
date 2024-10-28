@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 20px; /* Adjusted margin for better alignment */
+        }
+        a {
+            text-decoration: none;
+            color: #4e44a7;
+        }
+        .nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #f8f8f8;
+            padding: 10px;
+        }
+        .nav button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .luxury-car-gallery {
+            background-color: red; /* Red background for the button */
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 20px;
+        }
+        .picture {
+            width: 100%; /* Ensures pictures are of equal size */
+            height: auto;
+        }
+        .read-more {
+            display: block;
+            margin: 10px auto;
+            background-color: #4e44a7; /* Button color */
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+        .next-page {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: green; /* Green button */
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+        .logo {
+            width: 50px; /* Adjust logo size as necessary */
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nav">
+        <img src="/Luxury Rides Logo.png" alt="Luxury Rides Logo" class="logo"> <!-- Logo -->
+        <button onclick="location.href='index.html'">Home Page</button>
+        <button onclick="location.href='car-reviews.html'">Car Reviews</button>
+        <button class="luxury-car-gallery" onclick="location.href='luxury-car-gallery.html'">Luxury Car Gallery</button>
+        <button onclick="location.href='contact.html'">Contact Us</button>
+        <button onclick="location.href='top-car-brands.html'">Top Car Brands</button>
+    </div>
+
+    <div class="container">
+        <div>
+            <img src="rollsroyce.jpg" alt="Rolls Royce phantom" class="picture">
+            <button class="read-more" onclick="location.href='car1.html'">Read More</button>
+        </div>
+        <div>
+            <img src="lambo.jpg" alt="Lamborghini" class="picture">
+            <button class="read-more" onclick="location.href='car2.html'">Read More</button>
+        </div>
+        <div>
+            <img src="maserati.jpg" alt="Maserati" class="picture">
+            <button class="read-more" onclick="location.href='car3.html'">Read More</button>
+        </div>
+        <div>
+            <img src="defender.jpg" alt="Land Rover Defender" class="picture">
+            <button class="read-more" onclick="location.href='car4.html'">Read More</button>
+        </div>
+        <div>
+            <img src="ferrari.jpg" alt="Ferrari 812" class="picture">
+            <button class="read-more" onclick="location.href='car5.html'">Read More</button>
+        </div>
+        <div>
+            <img src="buggati.jpg" alt="Buggati Chiron" class="picture">
+            <button class="read-more" onclick="location.href='car6.html'">Read More</button>
+        </div>
+    </div>
+
+    <button class="next-page" onclick="location.href='next-page.html'">Next Page</button>
+
+</body>
+</html>
